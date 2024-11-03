@@ -1,0 +1,120 @@
+﻿Theta Tau Theta Gamma 
+Iota Gamma Class 
+CS Pledge Project
+Fall 2024
+________________
+
+
+Foreword
+
+
+Hi pledgies– 
+
+
+Your Aunt and Uncle do not walk amongst the CS gods of Theta Tau, but we do pray to them, and they have answered. Your older brothers (said gods), have volunteered to help you with your CS project for this semester. Lily Collins and Shu Adhya will be your main points of contact for those of you working on this project. Please direct questions/concerns to them (if you need real help, absolutely do not ask Arielle or Rohan). Other brothers will be great resources as well for this project, do not be afraid to ask for guidance via slack or by contacting brothers directly. If you need a brother's number or email, reach out to your pledge family (Arielle, Rohan, Atul and Kathleen). 
+
+
+Goodluck with this one!!
+
+
+Context
+What’s up pledges! Get hyped because this project is gonna be 1) super cool to work on 2) super applicable as an industry-standard software engineering project and 3) super useful for the fraternity once it’s done. So let’s dive right into it.
+
+
+One of my favorite things about Theta Tau is how many professional and academic resources are available to brothers, like company interview banks, class mentor lists, practice exams, alumni contacts, etc. However, it’s pretty hard to access these resources when you need them, as they could be floating around various places, like Slack, Google Drive, Dropbox, etc. It’d be nice if everything was in one place, and instead of sifting through all the documents, you got the information you needed with a simple question. Some people might call me an AI fiend for this, but I think I know just the thing for the job…
+
+
+Enter Chat-THT! Your CS project for this semester will be to develop a ChatGPT-style chatbot that can answer Theta Gamma chapter-specific questions that bros have. The scope of topics that your chatbot should be able to handle will be defined in the Requirements section below. Let’s first jump into the Tasks/Deliverables we’ll require for this project.
+
+
+
+
+
+
+Task(s) 
+* Compile a list of chapter-specific documents/resources that you will be provided by your aunt/uncle. These are the documents that will make up the database that your Generative-AI model will look to when attempting to answer Theta Tau specific questions.
+* Learn about LLM’s and the basics of Retrieval-Augmented-Generation (RAG). These are two important tools that you will use to build out the core of your application. Check out the Resources section below for some curated resources on these topics. And as always, contact Shu or Lily with any questions you may have!
+* Design the core architecture of your RAG application (what LLM model you’ll use to handle queries, what vector database you’ll use to store vector embeddings, where you’ll store documents, etc.) Consult Shu or Lily for help if you have any questions during this step and walk them through your final architecture design before you start coding.
+* Decide on what the user interface for your application will look like. Here are three options, ranked from easiest to hardest.
+   * 1. A Command Line Interface
+      * Users have to provide their input query into the terminal.
+   * 2. A Slackbot
+      * You’ll develop a SlackBot for the THT-Slack that will exist in its own channel. Whenever a user asks a question in this channel, the application will run the query and the SlackBot will provide back the response. I think this would be super cool and not too difficult to set up since Slack already provides you with an interface to develop your chatbot on. I’ve provided some additional resources in the Resources section below to help you get started with building a custom Slack integration.
+   * 3. A Full-Stack Web Application, like ChatGPT
+      * You’ll develop a full-stack web application, in a framework like Next.js where users can input queries on the front end. The backend will consist of your core RAG application, where the input will be the user query and the output will be the retrieval augmented LLM output. Frontend-backend communication will happen through a REST API.
+      * Disclaimer: Unless you’re a seasoned developer, I’d recommend starting this extremely early, like literally your first/second pledge chapter as the scope of this implementation is much larger than the first two.
+* Develop your application! Start with the core RAG application, as that is the most important component. The brothers will compile the necessary documents you’ll need ASAP, but while they’re working on that you can use dummy documents/data as a placeholder. Once you’ve got an implementation working through the terminal, try creating either the Slackbot or a full-stack application.
+   * Languages I’d recommend for Core Application: Python, Python, did I mention Python?
+   * Languages I’d recommend for SlackBot: Python
+   * Languages I’d recommend for a full-stack application: Next.js/React.js (frontend), Python (backend) → look into the Flask library
+
+
+Requirements
+Your final deliverable will be a working, LLM-powered application that is capable of answering the following questions:
+1. Provide me the contact information for 3 alumni bros who studied Aerospace Engineering.
+2. Who are the founders of the Theta Gamma chapter?
+3. What are some interview questions that Tesla likes to ask internship candidates?
+4. Who are some brothers taking EECS 281?
+Along with the above questions, your application will be spot-checked with some other related questions. Therefore, this is the scope of information that your LLM should have access to:
+1. List of recent THT alumni, their phone numbers/emails, their college major
+2. Pledge white book information
+3. Interview questions repository
+4. Study buddy list
+As described in the Tasks section above, the user interface for your application can be one of three implementations:
+1. A command-line interface application
+2. A slack bot integrated in the THT-Slack
+3. A full stack web application hosted separately from the THT Website
+
+
+
+
+Design 
+* As described in the Tasks section above, figure out the architecture of your core RAG application first. Develop that and ensure it works through the command line (terminal). Then, worry about the user interface.
+Git
+* When you’re working together, you may find it helpful to use a version control system like Git to store and track changes you make to your codebase(s). Check out this Git 101 tutorial that Hari made for a past CS pledge project!
+
+
+Tips 
+1. Start early! This is a ton of new information and it may seem overwhelming at first. Make sure you give yourself enough time to work through all the details.
+2. Plan and architect first, code later. If you have a solid plan, and a solid understanding of what you want to do, the code will come easily.
+3. Google and ChatGPT/Perplexity are your best friends when stuck! UMich students have free access to Perplexity Pro, so take advantage of that as much as you can.
+4. Work together.
+5. Consult older bros 
+   1. Be respectful of older bros time when asking for help/advice. They are also full time students and are willing to help you out of the goodness of their heart. Be mindful, polite, and patient. 
+
+
+Resources 
+Brother
+	Email
+	Phone
+	Shu Adhya
+	Angshu Adhya
+	+1(408) 906-9634
+	Lily Collins
+	Lily Collins
+	+1(408) 500-2307
+	
+
+* Large Language Models (LLMs)
+   * What is an LLM?
+      * https://www.nvidia.com/en-us/glossary/large-language-models/
+   * OpenAI API Documentation: Start here to learn about how to work with LLM capabilities in a programming environment. Go to the Quickstart to create your first mini-LLM application.
+      * https://platform.openai.com/docs/overview
+      * If you have any questions about working with the OpenAI API, LLM’s, or anything else please contact either me or Lily! We’d be happy to help you get set up.
+   * (Optional) For my overachievers, try reading the following research paper: “Attention is All You Need”. It is the seminal paper that sparked today’s AI revolution—it introduces the transformer architecture used in all LLM’s today.
+      * https://arxiv.org/pdf/1706.03762
+* Retrieval-Augmented Generation (RAG)
+   * Now that you know what an LLM does and how to use it, you might think to yourself- “It’s great that an LLM like GPT-4 knows all this information about the world. But it couldn’t possibly know anything about the Theta Gamma chapter since we didn’t provide it data to train on.” 
+   * And you’d be exactly right. The tool we’ll be using to solve this problem is Retrieval-Augmented Generation. In less-fancy terms: this refers to the LLM’s ability to generate an answer based on specific information that the developer provides it as context. This allows us to leverage the powerful capabilities of LLMs while ensuring that the information it generate about a specific topic (like the Theta Gamma chapter) is accurate. Here are some helpful resources to learn more about Retrieval-Augmented Generation.
+   * What is RAG? Short video from IBM that provides one of the most intuitive explanations I’ve found on the internet.
+      * https://www.youtube.com/watch?v=qppV3n3YlF8&t=310s
+   * Building a basic RAG application
+      * https://python.langchain.com/docs/tutorials/rag/
+   * If you’re interested in getting more practice with RAG and LLM’s, I’d recommend checking out the RAG tutorials under the “FreeCodeCamp” channel on YouTube. Lots of good resources to help you nail your understanding of these tools.
+* Pinecone and Langchain
+   * These are two additional tools that serve an important role in the RAG pipeline you’ll build- chunking, generating vector embeddings, and storing these vector embeddings to be used as context by your LLM.
+   * Introduction to Langchain
+   * Introduction to Pinecone
+* Building a Slackbot
+* Building a full-stack application with Next.js
+* Other/Miscellaneous

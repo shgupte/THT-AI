@@ -2,17 +2,20 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+/pyvenv.cfg
+bin/
 # C extensions
 *.so
-
+*.DS_STORE
 # Distribution / packaging
 .Python
+include/
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
+share/
 .eggs/
 lib/
 lib64/
