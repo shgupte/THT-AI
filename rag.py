@@ -61,8 +61,12 @@ spec = ServerlessSpec(cloud='aws', region='us-east-1')
 #     time.sleep(1)
 
 print("Creating vectorstore...")
-vectorstore = PineconeVectorStore.from_documents(
-    documents=splits,
+# vectorstore = PineconeVectorStore.from_documents(
+#     documents=splits,
+#     index_name=INDEX_NAME,
+#     embedding=embed
+# )
+vectorstore = PineconeVectorStore.from_existing_index(
     index_name=INDEX_NAME,
     embedding=embed
 )
@@ -138,4 +142,4 @@ def add_docs(directory):
         print("Issue adding documents to vectorstore. Operation was cancelled.")
     
 
-# print(ask_tht_ai(input("Enter your prompt: ")))
+print(ask_tht_ai(input("Enter your prompt: ")))
