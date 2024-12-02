@@ -1,3 +1,11 @@
+'''
+Instructions for using this (locally on Flask server):
+
+- First, open an ngrok (ngrok must be installed) tunnel on the hosting machine. (e.g $ngrok http 3000)
+- Once the ngrok tunnel is opened, copy the ngrok http url that it generates
+- Copy that url and paste it into the 'askiggy' slash command on slack api and add '/slack/events' at the end
+- Run app, and command should work in slack; the text following command serves as LLM input
+'''
 import os
 from flask import Flask, request, jsonify
 from langchain import hub
