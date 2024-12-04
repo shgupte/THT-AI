@@ -91,9 +91,9 @@ def ask_tht_ai(input_prompt)->str:
     return out
 
 
-def add_docs(directory):
+def add_docs(directory: str):
     try:
-        loader = DirectoryLoader('docs/', glob="**/*.txt")
+        loader = DirectoryLoader(directory, glob="**/*.txt")
     except:
         print("Invalid directory or documents. Please input filepath to directory with .txt files.")
         return
